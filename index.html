@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber Fares Visualization</title>
+
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<h1>Uber Fares Visualization</h1>
+
+<div id="filters">
+    <label for="passengerFilter">Filter by Passenger Count:</label>
+    <select id="passengerFilter">
+        <option value="all">All</option>
+        <option value="1">1 Passenger</option>
+        <option value="2">2 Passengers</option>
+        <option value="3">3 Passengers</option>
+        <option value="4">4 Passengers</option>
+        <option value="5">5+ Passengers</option>
+    </select>
+</div>
+
+<div id="chart"></div>
+
+<div id="infobox">
+    <h4>Uber Fares Visualization</h4>
+    <p><strong>Project Description:</strong> This interactive map visualizes global Uber ride data, showing fare amounts and passenger counts. Markers are color-coded to represent the number of passengers for each ride. The size of each marker reflects the fare amount.</p>
+    <p><strong>Developer:</strong> Joey Rudolph</p>
+    <p><strong>Data Source:</strong> <a href="https://www.kaggle.com/datasets">Uber Dataset</a></p>
+    <p><strong>Date:</strong> 2024-12-12</p>
+    <h4>Legend: Passenger Count</h4>
+    <div class="legend-item">
+        <span class="legend-color passenger-1"></span> 1 Passenger
+    </div>
+    <div class="legend-item">
+        <span class="legend-color passenger-2"></span> 2 Passengers
+    </div>
+    <div class="legend-item">
+        <span class="legend-color passenger-3"></span> 3 Passengers
+    </div>
+    <div class="legend-item">
+        <span class="legend-color passenger-4"></span> 4 Passengers
+    </div>
+    <div class="legend-item">
+        <span class="legend-color passenger-5"></span> 5+ Passengers
+    </div>
+    <button id="toggleInfo">Hide Info</button>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
